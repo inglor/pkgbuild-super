@@ -1,0 +1,19 @@
+pkgbase = st
+	pkgdesc = A simple virtual terminal emulator for X.
+	pkgver = 0.7
+	pkgrel = 1
+	url = http://st.suckless.org
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = ncurses
+	depends = libxft
+	depends = libxext
+	depends = xorg-fonts-misc
+	source = http://dl.suckless.org/st/st-0.7.tar.gz
+	source = config.h
+	md5sums = 29b2a599cf1511c8062ed8f025c84c63
+	md5sums = SKIP
+
+pkgname = st
+
