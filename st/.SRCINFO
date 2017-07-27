@@ -1,6 +1,6 @@
 pkgbase = st-git
 	pkgdesc = Simple virtual terminal emulator for X
-	pkgver = 0.7.24.g5a10aca
+	pkgver = 0.7.31.g7f99032
 	pkgrel = 1
 	epoch = 1
 	url = http://st.suckless.org/
@@ -14,7 +14,7 @@ pkgbase = st-git
 	provides = st
 	conflicts = st
 	options = zipman
-	source = git://git.suckless.org/st#commit=5a10aca702bf7bc9094cb4abaea6c59558740d29
+	source = git://git.suckless.org/st
 	source = config.h
 	source = http://st.suckless.org/patches/st-scrollback-20170329-149c0d3.diff
 	source = http://st.suckless.org/patches/st-scrollback-mouse-20170427-5a10aca.diff
