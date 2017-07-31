@@ -1,0 +1,31 @@
+# Maintainer: Jonathan Steel <jsteel at archlinux.org>
+# Contributor: Mark Pustjens <pustjens@dds.nl>
+# Contributor: Geoffroy Carrier <geoffroy.carrier@koon.fr>
+# Contributor: Giorgio Lando <patroclo7@gmail.com>
+# Contributor: Leslie P. Polzer <polzer@gnu.org>
+
+pkgname=isync
+pkgver=1.2.1
+pkgrel=4
+pkgdesc="IMAP and MailDir mailbox synchronizer"
+arch=('i686' 'x86_64')
+url="http://isync.sourceforge.net"
+license=('GPL2')
+depends=('openssl' 'libsasl')
+source=('git://git.code.sf.net/p/isync/isync#branch=1.2'
+        openssl1.1.patch)
+md5sums=('SKIP'
+         '1ce3b3bec49ed33bc259456429c76ff6')
+
+build() {
+  cd $pkgname
+  touch $srcdir/$_gitname/ChangeLog
+  ./autogen.sh || return 1
+  ./configure --prefix=/usr || return 1
+  make || return 1
+}
+
+package() {
+  cd $pkgname
+  make DESTDIR="$pkgdir" install
+}

@@ -1,0 +1,15 @@
+pkgbase = isync
+	pkgdesc = IMAP and MailDir mailbox synchronizer
+	pkgver = 1.2.1
+	pkgrel = 4
+	url = http://isync.sourceforge.net
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	depends = openssl
+	depends = libsasl
+	source = git://git.code.sf.net/p/isync/isync#branch=1.2
+	md5sums = SKIP
+
+pkgname = isync
+
