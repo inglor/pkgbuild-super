@@ -14,9 +14,9 @@ options=('zipman')
 depends=('libxft')
 makedepends=('ncurses' 'libxext' 'git')
 epoch=1
-_patches=('http://st.suckless.org/patches/st-scrollback-20170329-149c0d3.diff'
-          'http://st.suckless.org/patches/st-scrollback-mouse-20170427-5a10aca.diff'
-          'http://st.suckless.org/patches/st-scrollback-mouse-altscreen-20170427-5a10aca.diff')
+_patches=('http://st.suckless.org/patches/scrollback/st-scrollback-20170329-149c0d3.diff'
+          'http://st.suckless.org/patches/scrollback/st-scrollback-mouse-20170427-5a10aca.diff'
+          'http://st.suckless.org/patches/scrollback/st-scrollback-mouse-altscreen-20170427-5a10aca.diff')
 # include config.h and any patches you want to have applied here
 source=('git://git.suckless.org/st'
         'config.h'
