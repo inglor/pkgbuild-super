@@ -1,6 +1,6 @@
 pkgbase = st-git
 	pkgdesc = Simple virtual terminal emulator for X
-	pkgver = 0.7.33.g9c61f29
+	pkgver = 0.7.37.gb1338e9
 	pkgrel = 1
 	epoch = 1
 	url = http://st.suckless.org/
