@@ -1,8 +1,7 @@
-pkgbase = st-git
+pkgbase = st
 	pkgdesc = Simple virtual terminal emulator for X
-	pkgver = 0.7.41.g1f24bde
+	pkgver = 0.8.1
 	pkgrel = 1
-	epoch = 1
 	url = http://st.suckless.org/
 	arch = i686
 	arch = x86_64
@@ -14,18 +13,16 @@ pkgbase = st-git
 	provides = st
 	conflicts = st
 	options = zipman
-	source = git://git.suckless.org/st
+	source = https://git.suckless.org/st/snapshot/st-0.8.1.tar.gz
 	source = config.h
-	source = https://st.suckless.org/patches/scrollback/st-scrollback-20170329-149c0d3.diff
-	source = https://st.suckless.org/patches/scrollback/st-scrollback-mouse-20170427-5a10aca.diff
-	source = https://st.suckless.org/patches/scrollback/st-scrollback-mouse-altscreen-20170427-5a10aca.diff
-	source = https://st.suckless.org/patches/dracula/st-dracula-20170803-7f99032.diff
+	source = https://st.suckless.org/patches/scrollback/st-scrollback-0.8.diff
+	source = https://st.suckless.org/patches/scrollback/st-scrollback-mouse-0.8.diff
+	source = https://st.suckless.org/patches/scrollback/st-scrollback-mouse-altscreen-0.8.diff
 	sha1sums = SKIP
 	sha1sums = SKIP
-	sha1sums = 6a41683a04375f192d014cead227c749c595a721
-	sha1sums = 81b4a93c7bbf6854ec60630a5f7f50268a106a4b
-	sha1sums = b181427a52dea0f1b5635cf51263a016d4d27cdf
-	sha1sums = f263e7d8a490355caad6514a8e053b89cba52145
+	sha1sums = 623f474b62fb08e0b470673bf8ea947747e1af8b
+	sha1sums = 46e92d9d3f6fd1e4f08ed99bda16b232a1687407
+	sha1sums = d3329413998c5f3feaa7764db36269bf7b3d1334
 
-pkgname = st-git
+pkgname = st
 
