@@ -19,6 +19,7 @@
 
 # diffs
 */*.diff
+!*/st-dracula-0.8.2.diff
 
 # linux-gc
 # BMQ patch
