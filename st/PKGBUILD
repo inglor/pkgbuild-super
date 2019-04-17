@@ -4,7 +4,7 @@
 
 pkgname=st
 _pkgname=st
-pkgver=0.8.2
+pkgver=0.8.2.r12.gf1546cf
 pkgrel=1
 pkgdesc='Simple virtual terminal emulator for X'
 url='http://st.suckless.org/'
@@ -13,33 +13,33 @@ license=('MIT')
 options=('zipman')
 depends=('libxft')
 makedepends=('ncurses' 'libxext' 'git')
-_patches=('https://st.suckless.org/patches/scrollback/st-scrollback-20190122-3be4cf1.diff'
+_patches=('https://st.suckless.org/patches/scrollback/st-scrollback-20190331-21367a0.diff'
           'https://st.suckless.org/patches/scrollback/st-scrollback-mouse-0.8.diff'
           'https://st.suckless.org/patches/scrollback/st-scrollback-mouse-altscreen-20190131-e23acb9.diff'
           'st-dracula-0.8.2.diff'
           )
 # include config.h and any patches you want to have applied here
-source=("https://dl.suckless.org/st/${_pkgname}-${pkgver}.tar.gz"
+source=("git+https://git.suckless.org/st"
         'config.h'
         ${_patches[@]})
-sha1sums=('1093714e46adf3f02f9ae9922c49d8ff63b83128'
-          '55a6e62663f8ebe1951353275f53090be7247933'
-          '0be8cf5c0098569e4b4d862183014c0a052dc704'
-          '46e92d9d3f6fd1e4f08ed99bda16b232a1687407'
-          '0743f3736ff18be535e25c0916a89e5eed9d5f4f'
-          '0ae1b440a2b09fc366a1399affb8376fdf0f186f')
+sha256sums=('SKIP'
+            '33ce9225f4f71b70bfa735a128f4a1fdcef12d920917e7341204efeb69e3142b'
+            'f974bc0e11bda909a6d6d529d28abde4c97e651107b6a6047f2fab8837010b43'
+            '3fb38940cc3bad3f9cd1e2a0796ebd0e48950a07860ecf8523a5afd0cd1b5a44'
+            '13e1c6ba66bd3cfa6666e75b1991c10bc5c24db024a743efe9eef9710b32721e'
+            'fb0b87a6ea9ba5611cc2e0014aedc6260858e442192de415cd1715729d31aba7')
 
 provides=("${_pkgname}")
 conflicts=("${_pkgname}")
 
-#pkgver() {
-#	cd "${_pkgname}"
-#	git describe --tags |sed 's/-/./g'
-#}
+pkgver() {
+  cd "$pkgname"
+  git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
 
 prepare() {
 	local file
-	cd "${_pkgname}-${pkgver}"
+	cd "${_pkgname}"
 	sed '/@tic/d' -i Makefile
 	for file in "${source[@]}"; do
 		if [[ "$file" == "config.h" ]]; then
@@ -55,12 +55,12 @@ prepare() {
 }
 
 build() {
-	cd "${_pkgname}-${pkgver}"
+	cd "${_pkgname}"
 	make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
 }
 
 package() {
-	cd "${_pkgname}-${pkgver}"
+	cd "${_pkgname}"
 	make PREFIX=/usr DESTDIR="${pkgdir}" install
 	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 	install -Dm644 README "${pkgdir}/usr/share/doc/${pkgname}/README"
