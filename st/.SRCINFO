@@ -1,6 +1,6 @@
 pkgbase = st
 	pkgdesc = Simple virtual terminal emulator for X
-	pkgver = 0.8.2.r12.gf1546cf
+	pkgver = 0.8.2.r31.g51e19ea
 	pkgrel = 1
 	url = http://st.suckless.org/
 	arch = i686
@@ -16,15 +16,15 @@ pkgbase = st
 	source = git+https://git.suckless.org/st
 	source = config.h
 	source = https://st.suckless.org/patches/scrollback/st-scrollback-20190331-21367a0.diff
-	source = https://st.suckless.org/patches/scrollback/st-scrollback-mouse-0.8.diff
-	source = https://st.suckless.org/patches/scrollback/st-scrollback-mouse-altscreen-20190131-e23acb9.diff
-	source = st-dracula-0.8.2.diff
+	source = https://st.suckless.org/patches/scrollback/st-scrollback-mouse-20191024-a2c479c.diff
+	source = https://st.suckless.org/patches/scrollback/st-scrollback-mouse-altscreen-20191024-a2c479c.diff
+	source = https://st.suckless.org/patches/dracula/st-dracula-0.8.2.diff
 	sha256sums = SKIP
-	sha256sums = 33ce9225f4f71b70bfa735a128f4a1fdcef12d920917e7341204efeb69e3142b
+	sha256sums = 18abdbb1bb4f26e933391bfeb01adf9812833c69d9b52a523a3dbc40db4666de
 	sha256sums = f974bc0e11bda909a6d6d529d28abde4c97e651107b6a6047f2fab8837010b43
-	sha256sums = 3fb38940cc3bad3f9cd1e2a0796ebd0e48950a07860ecf8523a5afd0cd1b5a44
-	sha256sums = 13e1c6ba66bd3cfa6666e75b1991c10bc5c24db024a743efe9eef9710b32721e
-	sha256sums = fb0b87a6ea9ba5611cc2e0014aedc6260858e442192de415cd1715729d31aba7
+	sha256sums = 319458d980195d18fa0f81a6898d58f8d046c5ff982ab872d741f54bb60e267d
+	sha256sums = 3e65338b3be0d25af699251fac3a705e1bf09a4e2d368449f2f08c2a25e969da
+	sha256sums = 5eb8e0375fda9373c3b16cabe2879027300e73e48dbd9782e54ffd859e84fb7e
 
 pkgname = st
 
