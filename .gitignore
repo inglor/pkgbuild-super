@@ -16,3 +16,10 @@
 *~
 *.bak
 *.swp
+
+# patches and diffs
+*/**.diff
+*/**.patch
+# don't ignore specific patches
+!vim-youcompleteme-git/rls.patch
+!vim-youcompleteme-git/omnisharp.patch
