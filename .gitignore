@@ -21,5 +21,6 @@
 */**.diff
 */**.patch
 # don't ignore specific patches
+!linux-gc/0000-sphinx-workaround.patch
 !vim-youcompleteme-git/rls.patch
 !vim-youcompleteme-git/omnisharp.patch
