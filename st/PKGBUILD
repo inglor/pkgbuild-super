@@ -3,8 +3,7 @@
 # Contributor: Scytrin dai Kinthra <scytrin@gmail.com>
 
 pkgname=st
-_pkgname=st
-pkgver=0.8.3.r0.g43a395a
+pkgver=0.8.3
 pkgrel=1
 pkgdesc='Simple virtual terminal emulator for X'
 url='http://st.suckless.org/'
@@ -13,26 +12,24 @@ license=('MIT')
 options=('zipman')
 depends=('libxft')
 makedepends=('ncurses' 'libxext' 'git')
-_patches=('https://st.suckless.org/patches/scrollback/st-scrollback-20200419-72e3f6c.diff')
+_patches=('https://st.suckless.org/patches/scrollback/st-scrollback-20200419-72e3f6c.diff'
+          'https://st.suckless.org/patches/scrollback/st-scrollback-mouse-20191024-a2c479c.diff'
+		  'https://st.suckless.org/patches/scrollback/st-scrollback-mouse-altscreen-20200416-5703aa0.diff')
 # include config.h and any patches you want to have applied here
-source=("git+https://git.suckless.org/st#tag=0.8.3"
+source=("https://dl.suckless.org/st/st-0.8.3.tar.gz"
         'config.h'
         ${_patches[@]})
-sha256sums=('SKIP'
-            '273ea7009e10529d0b3577f6072d66b48a6a770f6b5e406ef02ce047b77ef680'
-            '1e41fe17a5ef5a8194eea07422b49d815e2c2bb4d58d84771f793be423005310')
-
-provides=("${_pkgname}")
-conflicts=("${_pkgname}")
-
-pkgver() {
-  cd "$pkgname"
-  git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
-}
+sha256sums=('939ae3da237e7c9489694853c205c7cbd5f2a2f0c17fe41a07477f1df8e28552'
+            '8d61d7f7733a621b199bf2878fdad1b5b0ff21c9c970811708c1650fbcfb716c'
+            '1e41fe17a5ef5a8194eea07422b49d815e2c2bb4d58d84771f793be423005310'
+            '319458d980195d18fa0f81a6898d58f8d046c5ff982ab872d741f54bb60e267d'
+            'cb87eb654985da46ff63663407184402393ad3d3013c8795570552fe56a15b9d')
+provides=("${pkgname}")
+conflicts=("${pkgname}")
 
 prepare() {
 	local file
-	cd "${_pkgname}"
+	cd "${pkgname}-${pkgver}"
 	sed '/@tic/d' -i Makefile
 	for file in "${source[@]}"; do
 	    if [[ "$file" == "config.h" ]]; then
@@ -48,12 +45,12 @@ prepare() {
 }
 
 build() {
-	cd "${_pkgname}"
+	cd "${pkgname}-${pkgver}"
 	make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
 }
 
 package() {
-	cd "${_pkgname}"
+	cd "${pkgname}-${pkgver}"
 	make PREFIX=/usr DESTDIR="${pkgdir}" install
 	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 	install -Dm644 README "${pkgdir}/usr/share/doc/${pkgname}/README"
