@@ -20,5 +20,5 @@
 # patches and diffs
 */**.diff
 */**.patch
-# ignore specific
-linux-gc/config
+
+!corefreq*/*.patch
