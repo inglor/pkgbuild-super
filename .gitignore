@@ -21,4 +21,7 @@
 */**.diff
 */**.patch
 
+# logs from building in chroot
+*/**.log
+
 !corefreq*/*.patch
