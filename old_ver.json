@@ -1,0 +1,16 @@
+{
+  "aarchup": "2.1.7",
+  "caatinga": "1.1.1",
+  "corefreq": "1.89.2",
+  "cpufreq": "v50.0",
+  "freeplane": "1.9.12",
+  "gdu": "v5.12.1",
+  "intellij-idea-ce-eap": "213.6777.11",
+  "intellij-idea-ua-eap": "213.6777.11",
+  "jd-gui": "1.6.6",
+  "linux-prjc": "5.15-prjc-r1",
+  "opensearch": "1.2.3",
+  "python-prometheus-fastapi-instrumentator": "5.7.1",
+  "python-sklearn-pandas": "2.2.0",
+  "topicons-redux": "6"
+}

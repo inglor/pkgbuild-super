@@ -1,0 +1,80 @@
+[__config__]
+oldver = "old_ver.json"
+newver = "new_ver.json"
+
+# Community #
+[opensearch]
+source = "github"
+github = "opensearch-project/OpenSearch"
+use_max_tag = true
+
+[freeplane]
+source = "github"
+github = "freeplane/freeplane"
+use_max_tag = true
+prefix = "release-"
+exclude_regex = ".*pre.*"
+
+[gdu]
+source = "github"
+github = "dundee/gdu"
+use_max_tag = true
+
+# AUR #
+[aarchup]
+source = "gitlab"
+gitlab = "artafinde/aarchup"
+use_max_tag = true
+
+[caatinga]
+source = "github"
+github = "headmastersquall/caatinga"
+use_max_tag = true
+prefix = "caatinga-"
+
+[corefreq]
+source = "github"
+github = "cyring/CoreFreq"
+use_max_tag = true
+
+[cpufreq]
+source = "github"
+github = "konkor/cpufreq"
+use_max_tag = true
+
+[topicons-redux]
+source = "gitlab"
+gitlab = "pop-planet/TopIcons-Redux"
+use_max_tag = true
+
+[intellij-idea-ua-eap]
+source = "cmd"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='IntelliJ IDEA']/channel[@status='release' or @status='eap']/build[not(@number <= preceding-sibling::build/@number) and not(@number <=following-sibling::build/@number)]/@fullNumber)\" -"
+
+[intellij-idea-ce-eap]
+source = "cmd"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='IntelliJ IDEA']/channel[@status='release' or @status='eap']/build[not(@number <= preceding-sibling::build/@number) and not(@number <=following-sibling::build/@number)]/@fullNumber)\" -"
+
+[jd-gui]
+source = "github"
+github = "java-decompiler/jd-gui"
+use_max_tag = true
+prefix = "v"
+
+[linux-prjc]
+source = "gitlab"
+gitlab = "alfredchen/linux-prjc"
+use_max_tag = true
+prefix = "v"
+
+[python-prometheus-fastapi-instrumentator]
+source = "github"
+github = "trallnag/prometheus-fastapi-instrumentator"
+use_max_tag = true
+prefix = "releases/"
+
+[python-sklearn-pandas]
+source = "github"
+github = "scikit-learn-contrib/sklearn-pandas"
+use_max_tag = true
+prefix = "v"
