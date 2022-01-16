@@ -20,6 +20,12 @@ source = "github"
 github = "dundee/gdu"
 use_max_tag = true
 
+[shotcut]
+source = "github"
+github = "mltframework/shotcut"
+use_max_tag = true
+prefix = "v"
+
 # AUR #
 [aarchup]
 source = "gitlab"
