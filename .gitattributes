@@ -1,1 +1,2 @@
-apikey.crypt filter=git-crypt diff=git-crypt
+[attr]crypt filter=git-crypt diff=git-crypt
+*.crypt crypt

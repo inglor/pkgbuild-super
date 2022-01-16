@@ -11,6 +11,8 @@
 
 # subfolders, e.g. source or built package trees, vcs
 */**/
+# subfolders, e.g. source or built package trees, vcs
+!*/.git-crypt
 
 # backup files
 *~
