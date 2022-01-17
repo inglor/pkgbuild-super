@@ -27,6 +27,12 @@ github = "mltframework/shotcut"
 use_max_tag = true
 prefix = "v"
 
+[vulture]
+source = "github"
+github = "jendrikseipp/vulture"
+use_max_tag = true
+prefix = "v"
+
 # AUR #
 [aarchup]
 source = "gitlab"

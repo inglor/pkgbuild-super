@@ -13,5 +13,6 @@
   "python-prometheus-fastapi-instrumentator": "5.7.1",
   "python-sklearn-pandas": "2.2.0",
   "shotcut": "21.12.24",
-  "topicons-redux": "6"
+  "topicons-redux": "6",
+  "vulture": "2.3"
 }
