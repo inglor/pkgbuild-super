@@ -27,3 +27,5 @@
 */**.log
 
 !corefreq*/*.patch
+
+*.json

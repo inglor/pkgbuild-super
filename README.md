@@ -13,7 +13,7 @@ Pre-built versions of these packages are also [available](https://wiki.archlinux
 Add the following lines to `/etc/pacman.conf`:
 
 ```ini
-[orhun]
+[artafinde]
 Server = https://pkgbuild.com/~artafinde/repo
 ```
 

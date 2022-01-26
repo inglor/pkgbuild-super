@@ -141,11 +141,11 @@ use_max_tag = true
 
 [intellij-idea-ua-eap]
 source = "cmd"
-cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='IntelliJ IDEA']/channel[@status='release' or @status='eap']/build[not(@number <= preceding-sibling::build/@number) and not(@number <=following-sibling::build/@number)]/@fullNumber)\" -"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='IntelliJ IDEA']/channel[@status='release' or @status='eap']/build/@fullNumber)\" -"
 
 [intellij-idea-ce-eap]
 source = "cmd"
-cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='IntelliJ IDEA']/channel[@status='release' or @status='eap']/build[not(@number <= preceding-sibling::build/@number) and not(@number <=following-sibling::build/@number)]/@fullNumber)\" -"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='IntelliJ IDEA']/channel[@status='release' or @status='eap']/build/@fullNumber)\" -"
 
 [jd-gui]
 source = "github"
