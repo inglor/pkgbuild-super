@@ -26,6 +26,7 @@
 # logs from building in chroot
 */**.log
 
-!corefreq*/*.patch
-
 *.json
+
+!corefreq*/*.patch
+!auracle-git/*.patch
