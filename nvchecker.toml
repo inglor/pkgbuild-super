@@ -29,6 +29,51 @@ source = "github"
 github = "opensearch-project/cross-cluster-replication"
 use_latest_tag = true
 
+[opensearch-dashboards]
+source = "github"
+github = "opensearch-project/opensearch-dashboards"
+use_latest_tag = true
+
+[opensearch-dashboards-alerting-plugin]
+source = "github"
+github = "opensearch-project/alerting-dashboards-plugin"
+use_latest_tag = true
+
+[opensearch-dashboards-anomaly-detection-plugin]
+source = "github"
+github = "opensearch-project/anomaly-detection-dashboards-plugin"
+use_latest_tag = true
+
+[opensearch-dashboards-gantt-chart-plugin]
+source = "github"
+github = "opensearch-project/dashboards-visualizations"
+use_latest_tag = true
+
+[opensearch-dashboards-index-management-plugin]
+source = "github"
+github = "opensearch-project/index-management-dashboards-plugin"
+use_latest_tag = true
+
+[opensearch-dashboards-observability-plugin]
+source = "github"
+github = "opensearch-project/observability"
+use_latest_tag = true
+
+[opensearch-dashboards-query-workbench-plugin]
+source = "github"
+github = "opensearch-project/sql"
+use_latest_tag = true
+
+[opensearch-dashboards-reports-plugin]
+source = "github"
+github = "opensearch-project/dashboards-reports"
+use_latest_tag = true
+
+[opensearch-dashboards-security-plugin]
+source = "github"
+github = "opensearch-project/security-dashboards-plugin"
+use_latest_tag = true
+
 [opensearch-index-management-plugin]
 source = "github"
 github = "opensearch-project/index-management"
@@ -67,7 +112,8 @@ use_latest_tag = true
 [opensearch-sql-plugin]
 source = "github"
 github = "opensearch-project/sql"
-use_latest_tag = true
+use_max_tag = true
+sort_version_key = "vercmp"
 
 [freeplane]
 source = "github"
@@ -111,6 +157,14 @@ source = "github"
 github = "graysky2/profile-cleaner"
 use_max_tag = true
 prefix = "v"
+
+[intellij-idea-community-edition]
+source = "cmd"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='IntelliJ IDEA']/channel[@status='release' or @status!='eap']/build/@version)\" -"
+
+[pycharm-community-edition]
+source = "cmd"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='PyCharm']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
 # AUR #
 [aarchup]
@@ -168,5 +222,11 @@ prefix = "releases/"
 [python-sklearn-pandas]
 source = "github"
 github = "scikit-learn-contrib/sklearn-pandas"
+use_max_tag = true
+prefix = "v"
+
+[rustypaste-cli]
+source = "github"
+github = "orhun/rustypaste-cli"
 use_max_tag = true
 prefix = "v"
