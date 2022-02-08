@@ -4,6 +4,11 @@ newver = "new_ver.json"
 keyfile = "apikey.crypt"
 
 # Community #
+[neomutt]
+source = "github"
+github = "neomutt/neomutt"
+use_max_tag = true
+
 [opensearch]
 source = "github"
 github = "opensearch-project/OpenSearch"
