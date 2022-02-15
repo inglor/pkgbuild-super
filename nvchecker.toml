@@ -4,6 +4,11 @@ newver = "new_ver.json"
 keyfile = "apikey.crypt"
 
 # Community #
+[alot]
+source = "github"
+github = "pazz/alot"
+use_max_tag = true
+
 [neomutt]
 source = "github"
 github = "neomutt/neomutt"
@@ -119,6 +124,11 @@ source = "github"
 github = "opensearch-project/sql"
 use_max_tag = true
 sort_version_key = "vercmp"
+
+[python-mysql-connector]
+source = "github"
+github = "mysql/mysql-connector-python"
+use_latest_tag = true
 
 [freeplane]
 source = "github"
