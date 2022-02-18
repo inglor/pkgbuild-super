@@ -167,6 +167,11 @@ github = "graysky2/profile-sync-daemon"
 use_max_tag = true
 prefix = "v"
 
+[keycloak]
+source = "github"
+github = "keycloak/keycloak"
+use_max_tag = true
+
 [profile-cleaner]
 source = "github"
 github = "graysky2/profile-cleaner"
