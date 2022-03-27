@@ -152,7 +152,7 @@ source = "github"
 github = "mltframework/shotcut"
 use_max_tag = true
 prefix = "v"
-ignored = "v22.01.17 v22.03.06"
+ignored = "v22.01.17 v22.03.06 v22.03.20"
 
 [tectonic]
 source = "github"
