@@ -19,6 +19,12 @@ source = "github"
 github = "makedumpfile/makedumpfile"
 use_max_tag = true
 
+[memray]
+source = "github"
+github = "bloomberg/memray"
+prefix = "v"
+use_max_tag = true
+
 [opensearch]
 source = "github"
 github = "opensearch-project/OpenSearch"
