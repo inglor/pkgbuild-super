@@ -204,6 +204,32 @@ cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.j
 source = "cmd"
 cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='PyCharm']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
+[jsoncpp]
+source = "github"
+github = "open-source-parsers/jsoncpp"
+use_max_tag = true
+
+[gitlab-exporter]
+source = "git"
+git = "https://gitlab.archlinux.org/artafinde/gitlab-exporter.git"
+prefix = "v"
+
+[polybar]
+source = "github"
+github = "polybar/polybar"
+use_latest_tag = true
+
+[keycloak-archlinux-theme]
+source = "git"
+git = "https://gitlab.archlinux.org/archlinux/keycloak-archlinux-theme.git"
+prefix = "v"
+
+[rustypaste-cli]
+source = "github"
+github = "orhun/rustypaste-cli"
+use_max_tag = true
+prefix = "v"
+
 # AUR #
 [aarchup]
 source = "gitlab"
@@ -255,16 +281,10 @@ prefix = "v"
 source = "github"
 github = "trallnag/prometheus-fastapi-instrumentator"
 use_max_tag = true
-prefix = "releases/"
+prefix = "v"
 
 [python-sklearn-pandas]
 source = "github"
 github = "scikit-learn-contrib/sklearn-pandas"
-use_max_tag = true
-prefix = "v"
-
-[rustypaste-cli]
-source = "github"
-github = "orhun/rustypaste-cli"
 use_max_tag = true
 prefix = "v"
