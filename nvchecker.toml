@@ -219,6 +219,12 @@ source = "github"
 github = "polybar/polybar"
 use_latest_tag = true
 
+[prometheus-systemd-exporter]
+source = "github"
+github = "povilasv/systemd_exporter"
+use_latest_tag = true
+prefix = "v"
+
 [keycloak-archlinux-theme]
 source = "git"
 git = "https://gitlab.archlinux.org/archlinux/keycloak-archlinux-theme.git"
@@ -250,6 +256,11 @@ use_max_tag = true
 [cpufreq]
 source = "github"
 github = "konkor/cpufreq"
+use_max_tag = true
+
+[lab-bin]
+source = "github"
+github = "zaquestion/lab"
 use_max_tag = true
 
 [topicons-redux]
