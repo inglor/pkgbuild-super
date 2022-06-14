@@ -28,7 +28,7 @@ use_max_tag = true
 [opensearch]
 source = "github"
 github = "opensearch-project/OpenSearch"
-use_max_tag = true
+use_latest_tag = true
 
 [opensearch-alerting-plugin]
 source = "github"
@@ -133,8 +133,7 @@ use_latest_tag = true
 [opensearch-sql-plugin]
 source = "github"
 github = "opensearch-project/sql"
-use_max_tag = true
-sort_version_key = "vercmp"
+use_latest_tag = true
 
 [python-mysql-connector]
 source = "github"
@@ -158,7 +157,7 @@ source = "github"
 github = "mltframework/shotcut"
 use_max_tag = true
 prefix = "v"
-ignored = "v22.01.17 v22.03.06 v22.03.20"
+ignored = "v22.01.17 v22.03.06 v22.03.20 v22.05.23 v22.06.07"
 
 [tectonic]
 source = "github"
@@ -235,6 +234,11 @@ source = "github"
 github = "orhun/rustypaste-cli"
 use_max_tag = true
 prefix = "v"
+
+[lapce]
+source = "github"
+github = "lapce/lapce"
+use_latest_tag = true
 
 # AUR #
 [aarchup]
