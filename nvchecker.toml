@@ -229,6 +229,12 @@ source = "git"
 git = "https://gitlab.archlinux.org/archlinux/keycloak-archlinux-theme.git"
 prefix = "v"
 
+[rustypaste]
+source = "github"
+github = "orhun/rustypaste"
+use_max_tag = true
+prefix = "v"
+
 [rustypaste-cli]
 source = "github"
 github = "orhun/rustypaste-cli"
