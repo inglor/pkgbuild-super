@@ -304,6 +304,12 @@ github = "trallnag/prometheus-fastapi-instrumentator"
 use_max_tag = true
 prefix = "v"
 
+[coverage-conditional-plugin]
+source = "github"
+github = "wemake-services/coverage-conditional-plugin"
+use_max_tag = true
+# prefix = "v"
+
 [python-sklearn-pandas]
 source = "github"
 github = "scikit-learn-contrib/sklearn-pandas"
