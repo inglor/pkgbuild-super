@@ -246,6 +246,15 @@ source = "github"
 github = "lapce/lapce"
 use_latest_tag = true
 
+[jq]
+source = "github"
+github = "stedolan/jq"
+use_latest_tag = true
+
+[plocate]
+source = "git"
+git = "http://git.sesse.net/plocate"
+
 # AUR #
 [aarchup]
 source = "gitlab"
