@@ -28,112 +28,112 @@ use_max_tag = true
 [opensearch]
 source = "github"
 github = "opensearch-project/OpenSearch"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-alerting-plugin]
 source = "github"
 github = "opensearch-project/alerting"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-anomaly-detection-plugin]
 source = "github"
 github = "opensearch-project/anomaly-detection"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-asynchronous-search-plugin]
 source = "github"
 github = "opensearch-project/asynchronous-search"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-cross-cluster-replication-plugin]
 source = "github"
 github = "opensearch-project/cross-cluster-replication"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-dashboards]
 source = "github"
 github = "opensearch-project/opensearch-dashboards"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-dashboards-alerting-plugin]
 source = "github"
 github = "opensearch-project/alerting-dashboards-plugin"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-dashboards-anomaly-detection-plugin]
 source = "github"
 github = "opensearch-project/anomaly-detection-dashboards-plugin"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-dashboards-gantt-chart-plugin]
 source = "github"
 github = "opensearch-project/dashboards-visualizations"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-dashboards-index-management-plugin]
 source = "github"
 github = "opensearch-project/index-management-dashboards-plugin"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-dashboards-observability-plugin]
 source = "github"
 github = "opensearch-project/observability"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-dashboards-query-workbench-plugin]
 source = "github"
 github = "opensearch-project/sql"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-dashboards-reports-plugin]
 source = "github"
 github = "opensearch-project/dashboards-reports"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-dashboards-security-plugin]
 source = "github"
 github = "opensearch-project/security-dashboards-plugin"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-index-management-plugin]
 source = "github"
 github = "opensearch-project/index-management"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-job-scheduler-plugin]
 source = "github"
 github = "opensearch-project/job-scheduler"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-knn-plugin]
 source = "github"
 github = "opensearch-project/k-NN"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-observability-plugin]
 source = "github"
 github = "opensearch-project/observability"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-performance-analyzer-plugin]
 source = "github"
 github = "opensearch-project/performance-analyzer"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-reports-scheduler-plugin]
 source = "github"
 github = "opensearch-project/dashboards-reports"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-security-plugin]
 source = "github"
 github = "opensearch-project/security"
-use_latest_tag = true
+use_max_tag = true
 
 [opensearch-sql-plugin]
 source = "github"
 github = "opensearch-project/sql"
-use_latest_tag = true
+use_max_tag = true
 
 [python-mysql-connector]
 source = "github"
@@ -244,7 +244,7 @@ prefix = "v"
 [lapce]
 source = "github"
 github = "lapce/lapce"
-use_latest_tag = true
+use_max_tag = true
 
 [jq]
 source = "github"
@@ -254,6 +254,21 @@ use_latest_tag = true
 [plocate]
 source = "git"
 git = "http://git.sesse.net/plocate"
+
+[coverage-conditional-plugin]
+source = "github"
+github = "wemake-services/coverage-conditional-plugin"
+use_max_tag = true
+
+[lrzip]
+source = "github"
+github = "ckolivas/lrzip"
+use_latest_tag = true
+
+[corectrl]
+source = "gitlab"
+gitlab = "corectrl/corectrl"
+use_latest_tag = true
 
 # AUR #
 [aarchup]
@@ -313,11 +328,6 @@ github = "trallnag/prometheus-fastapi-instrumentator"
 use_max_tag = true
 prefix = "v"
 
-[coverage-conditional-plugin]
-source = "github"
-github = "wemake-services/coverage-conditional-plugin"
-use_max_tag = true
-# prefix = "v"
 
 [python-sklearn-pandas]
 source = "github"
