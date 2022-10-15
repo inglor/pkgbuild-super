@@ -152,6 +152,11 @@ source = "github"
 github = "dundee/gdu"
 use_max_tag = true
 
+[goaurrpc]
+source = "github"
+github = "moson-mo/goaurrpc"
+use_max_tag = true
+
 [shotcut]
 source = "github"
 github = "mltframework/shotcut"
