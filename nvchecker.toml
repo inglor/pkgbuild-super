@@ -162,7 +162,7 @@ source = "github"
 github = "mltframework/shotcut"
 use_max_tag = true
 prefix = "v"
-ignored = "v22.01.17 v22.03.06 v22.03.20 v22.05.23 v22.06.07"
+ignored = ""
 
 [tectonic]
 source = "github"
@@ -274,6 +274,11 @@ use_latest_tag = true
 source = "gitlab"
 gitlab = "corectrl/corectrl"
 use_max_tag = true
+
+[pyflow]
+source = "github"
+github = "David-OConnor/pyflow"
+use_latest_tag = true
 
 # AUR #
 [aarchup]
