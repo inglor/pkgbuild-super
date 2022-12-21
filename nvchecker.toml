@@ -280,6 +280,11 @@ source = "github"
 github = "David-OConnor/pyflow"
 use_latest_tag = true
 
+[ruff]
+source = "github"
+github = "charliermarsh/ruff"
+use_max_tag = true
+
 # AUR #
 [aarchup]
 source = "gitlab"
