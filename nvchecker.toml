@@ -9,6 +9,27 @@ source = "github"
 github = "pazz/alot"
 use_max_tag = true
 
+[coeurl]
+source = "git"
+git = "https://nheko.im/nheko-reborn/coeurl.git"
+prefix = "v"
+
+[mtxclient]
+source = "git"
+git = "https://nheko.im/nheko-reborn/mtxclient.git"
+prefix = "v"
+
+[nheko]
+source = "git"
+git = "https://nheko.im/nheko-reborn/nheko.git"
+prefix = "v"
+ignored = "20190519.1"
+
+[kafka]
+source = "github"
+github = "apache/kafka"
+use_max_tag = true
+
 [neomutt]
 source = "github"
 github = "neomutt/neomutt"
@@ -156,13 +177,14 @@ use_max_tag = true
 source = "github"
 github = "moson-mo/goaurrpc"
 use_max_tag = true
+ignored = "v1.3.0" # ignore until RPC v6
 
 [shotcut]
 source = "github"
 github = "mltframework/shotcut"
 use_max_tag = true
 prefix = "v"
-ignored = ""
+ignored = "23.03.03"
 
 [tectonic]
 source = "github"
