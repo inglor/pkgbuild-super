@@ -336,7 +336,7 @@ use_max_tag = true
 
 [topicons-redux]
 source = "gitlab"
-gitlab = "pop-planet/TopIcons-Redux"
+gitlab = "widgitlabs/software/TopIcons-Redux"
 use_max_tag = true
 
 [intellij-idea-ua-eap]
