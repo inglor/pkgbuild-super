@@ -179,12 +179,17 @@ github = "moson-mo/goaurrpc"
 use_max_tag = true
 ignored = "v1.3.0" # ignore until RPC v6
 
+[highlight]
+source = "git"
+git = "https://gitlab.com/saalen/highlight.git"
+prefix = "v"
+
 [shotcut]
 source = "github"
 github = "mltframework/shotcut"
 use_max_tag = true
 prefix = "v"
-ignored = "23.03.03"
+ignored = "23.07.09"
 
 [tectonic]
 source = "github"
@@ -192,6 +197,11 @@ github = "tectonic-typesetting/tectonic"
 use_max_tag = true
 prefix = "tectonic@"
 include_regex = "tectonic@.*"
+
+[thunderbird]
+source = "httpheader"
+url = "https://download.mozilla.org/?product=thunderbird-latest&os=linux64&lang=en-US"
+regex = "thunderbird-(.*)\\.tar\\.bz2$"
 
 [vulture]
 source = "github"
