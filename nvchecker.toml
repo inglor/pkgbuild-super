@@ -14,6 +14,11 @@ source = "git"
 git = "https://nheko.im/nheko-reborn/coeurl.git"
 prefix = "v"
 
+[curl]
+source = "github"
+github = "curl/curl"
+use_latest_tag=true
+
 [mtxclient]
 source = "git"
 git = "https://nheko.im/nheko-reborn/mtxclient.git"
@@ -26,9 +31,9 @@ prefix = "v"
 ignored = "20190519.1"
 
 [kafka]
-source = "github"
-github = "apache/kafka"
-use_max_tag = true
+source = "regex"
+url = "https://kafka.apache.org/downloads"
+regex = ">kafka-(.*)-src\\.tgz<"
 
 [neomutt]
 source = "github"
@@ -187,9 +192,9 @@ prefix = "v"
 [shotcut]
 source = "github"
 github = "mltframework/shotcut"
-use_max_tag = true
+use_latest_release=true
 prefix = "v"
-ignored = "23.07.09"
+ignored = "23.07.09, 23.07.18"
 
 [tectonic]
 source = "github"
