@@ -166,6 +166,11 @@ source = "github"
 github = "mysql/mysql-connector-python"
 use_latest_tag = true
 
+[solr]
+source = "regex"
+url = "https://solr.apache.org/downloads"
+regex = ">solr-(.*)-src\\.tgz<"
+
 [freeplane]
 source = "github"
 github = "freeplane/freeplane"
@@ -177,6 +182,7 @@ exclude_regex = ".*pre.*"
 source = "github"
 github = "dundee/gdu"
 use_max_tag = true
+prefix = "v"
 
 [goaurrpc]
 source = "github"
@@ -311,6 +317,7 @@ use_latest_tag = true
 source = "gitlab"
 gitlab = "corectrl/corectrl"
 use_max_tag = true
+prefix = "v"
 
 [pyflow]
 source = "github"
@@ -321,6 +328,12 @@ use_latest_tag = true
 source = "github"
 github = "charliermarsh/ruff"
 use_max_tag = true
+
+[zaproxy]
+source = "github"
+github = "zaproxy/zaproxy"
+use_max_tag = true
+prefix = "v"
 
 # AUR #
 [aarchup]
