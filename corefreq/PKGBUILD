@@ -12,19 +12,19 @@ _transparency=
 pkgbase=corefreq
 pkgname=(corefreq-client corefreq-server corefreq-dkms)
 _gitname=CoreFreq
-pkgver=1.96.5
+pkgver=1.97.1
 pkgrel=1
 pkgdesc="A CPU monitoring software with BIOS like functionalities"
 arch=('x86_64')
 url='https://github.com/cyring/CoreFreq'
-license=('GPL2')
+license=('GPL-2.0-only')
 depends=('dkms')
 source=(${pkgbase}-${pkgver}.tar.gz::"${url}/archive/${pkgver}.tar.gz"
         'dkms.conf'
         'honor-archlinux-compiler-flags.patch')
-b2sums=('c963471b94ce957830ac7928e1bc009c286e1db300f1f3de7da7cc1c5873015734be9e56df7d5fecef67cf28f349907ae4a2296d9f45801535f97f8d239907d3'
-        'c6d8849944f99195038ac252d010d3e3001cd1dcaee57218c4a7f58fa313aa38842e4ea991d4d9ff7d04063ebaa9900c06ff1eacfa6270341cf37fb752adc00c'
-        '3f5f9a27863412d620864e8c19e2683e3ef2103c4b95c126438330a9b532e2434664ce4860b6191552298131e434c09f5531428696dde7d70a1cb171b4f13edf')
+b2sums=('9bbfd3468a6b8033c34a0c18dacd5d02c18af1b033368e69cfe492de4499b322182ae8fc15074d4f70d58387ac6d14d859e6bd698e29e6ef647336ac46be560b'
+        'a47306b69244b2c7cfe34a5a19aabc7d22ef8982402da038bfb65a357bed9aa0d9f30b034afa7c6dbc23969448142a0027bd14364a14da92b1c666881e15420c'
+        'f4299ed5c44052a521988d417410081ddb92a5f481012f9c7a964ec0dee6a63be6123cef8f8618f23be6827e25aeb3fef93f8c270aaa3076cc1f434a6d4ca861')
 
 prepare(){
   cd "${_gitname}-${pkgver}"
@@ -33,11 +33,7 @@ prepare(){
 
 build() {
   cd "${_gitname}-${pkgver}"
-  if [ -n "${_transparency}" ]; then
-    make corefreqd corefreq-cli UI_TRANSPARENCY=1
-  else
-    make corefreqd corefreq-cli
-  fi
+  make prepare corefreqd corefreq-cli -j
 }
 
 package_corefreq-dkms() {
@@ -54,7 +50,8 @@ package_corefreq-dkms() {
       -i "${pkgdir}/usr/src/${pkgbase}-${pkgver}/dkms.conf"
 
   # Copy sources (including Makefile)
-  cp -r "${_gitname}-${pkgver}"/{*.c,*.h,Makefile} "${pkgdir}/usr/src/${pkgbase}-${pkgver}/"
+  cp -r "${_gitname}-${pkgver}"/{Makefile,scripter.sh} "${pkgdir}/usr/src/${pkgbase}-${pkgver}/"
+  cp -r "${_gitname}-${pkgver}"/${CARCH} "${pkgdir}/usr/src/${pkgbase}-${pkgver}/"
 }
 
 package_corefreq-server() {
@@ -62,7 +59,7 @@ package_corefreq-server() {
   depends=("corefreq-dkms=$pkgver")
 
   cd "${_gitname}-${pkgver}"
-  install -Dm755 corefreqd "${pkgdir}/usr/bin/corefreqd"
+  install -Dm755 build/corefreqd "${pkgdir}/usr/bin/corefreqd"
   install -Dm 0644 corefreqd.service "${pkgdir}/usr/lib/systemd/system/corefreqd.service"
 }
 
@@ -71,5 +68,5 @@ package_corefreq-client() {
   depends=("corefreq-server=$pkgver")
 
   cd "${_gitname}-${pkgver}"
-  install -Dm755 corefreq-cli "${pkgdir}/usr/bin/corefreq-cli"
+  install -Dm755 build/corefreq-cli "${pkgdir}/usr/bin/corefreq-cli"
 }
