@@ -108,7 +108,7 @@ use_max_tag = true
 
 [opensearch-dashboards-query-workbench-plugin]
 source = "github"
-github = "opensearch-project/sql"
+github = "opensearch-project/dashboards-query-workbench"
 use_max_tag = true
 
 [opensearch-dashboards-reports-plugin]
@@ -170,6 +170,24 @@ use_latest_tag = true
 source = "regex"
 url = "https://solr.apache.org/downloads"
 regex = ">solr-(.*)-src\\.tgz<"
+
+[sbt]
+source = "github"
+github = "sbt/sbt"
+use_max_tag = true
+prefix = "v"
+ignored = "v1.10.0-RC1 v1.10.0-RC2"
+
+
+[trompeloeil]
+source = "github"
+github = "rollbear/trompeloeil"
+use_latest_tag = true
+
+[droplet-agent]
+source = "github"
+github = "digitalocean/droplet-agent"
+use_latest_tag = true
 
 [freeplane]
 source = "github"
@@ -329,6 +347,12 @@ source = "github"
 github = "charliermarsh/ruff"
 use_max_tag = true
 
+[python-textual]
+source = "github"
+github = "Textualize/textual"
+use_latest_tag = true
+prefix = "v"
+
 [zaproxy]
 source = "github"
 github = "zaproxy/zaproxy"
@@ -350,7 +374,7 @@ prefix = "caatinga-"
 [corefreq]
 source = "github"
 github = "cyring/CoreFreq"
-use_max_tag = true
+use_latest_release = true
 
 [cpufreq]
 source = "github"
