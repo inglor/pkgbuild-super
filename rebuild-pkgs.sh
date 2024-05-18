@@ -12,7 +12,7 @@ ignored_pkg=("caatinga-git" "auracle-git" "vim-youcompleteme-git"
 rebuild_package() {
   msg2 "Rebuilding package '$1' ..."
   pushd "$1" > /dev/null || exit
-  extra-x86_64-build -- -c -n
+  nice pkgctl build --repo extra --arch x86_64
 	msg2 "Package $1 built"
   arch-repo-release.sh -p
   popd || exit
