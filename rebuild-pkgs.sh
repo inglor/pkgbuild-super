@@ -1,13 +1,12 @@
 #!/bin/bash
 
 # shellcheck source=/dev/null
-source "$HOME/.makepkg.conf"
+source "$HOME/.config/pacman/makepkg.conf"
 source /usr/share/makepkg/integrity/verify_signature.sh
 source /usr/share/makepkg/util/message.sh
 colorize
 
-ignored_pkg=("caatinga-git" "auracle-git" "vim-youcompleteme-git"
-             "freeplane-git" "corefreq-git")
+ignored_pkg=("caatinga-git" "freeplane-git" "corefreq-git")
 
 rebuild_package() {
   msg2 "Rebuilding package '$1' ..."
