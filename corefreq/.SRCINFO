@@ -1,25 +1,25 @@
 pkgbase = corefreq
 	pkgdesc = A CPU monitoring software with BIOS like functionalities
-	pkgver = 1.98.0
+	pkgver = 1.98.1
 	pkgrel = 1
 	url = https://github.com/cyring/CoreFreq
 	arch = x86_64
 	license = GPL-2.0-only
 	depends = dkms
-	source = corefreq-1.98.0.tar.gz::https://github.com/cyring/CoreFreq/archive/1.98.0.tar.gz
+	source = corefreq-1.98.1.tar.gz::https://github.com/cyring/CoreFreq/archive/1.98.1.tar.gz
 	source = dkms.conf
 	source = honor-archlinux-compiler-flags.patch
-	b2sums = db07c97b86b4715f4ddb4f32f4932c9cba2b9484c5140d02d45f844264572c9a058ccee2b528dea6b02cef2f122c2d96bf3adfd81db145a2577a90562432d3d2
+	b2sums = b0b865e3558cb8b2e0ead8275ae7f12f00cf0e4a2cd19ccfc8e0640ba7666166769b640f20b32f389702cfbdb58bd46658fb12dba0b9e58f7d584bebc2a46db0
 	b2sums = 84cce492c26c3686952b4ef77f2953413145bd06f3fee83e404da2325ca29172fe5c2a5949869e3cd357be2a681ab19450cb92bcab00330689131f1eec4c245f
-	b2sums = f4299ed5c44052a521988d417410081ddb92a5f481012f9c7a964ec0dee6a63be6123cef8f8618f23be6827e25aeb3fef93f8c270aaa3076cc1f434a6d4ca861
+	b2sums = 76a9ea8eb4cf8505556d2f546d1ca07acdbd70d94710165a8c85cd24786c40afd3c538c9f11c6c898056958768982bb24d70cee658cb52b12e47a369c77b2e5f
 
 pkgname = corefreq-client
 	pkgdesc = CoreFreq client
-	depends = corefreq-server=1.98.0
+	depends = corefreq-server=1.98.1
 
 pkgname = corefreq-server
 	pkgdesc = CoreFreq server
-	depends = corefreq-dkms=1.98.0
+	depends = corefreq-dkms=1.98.1
 
 pkgname = corefreq-dkms
 	pkgdesc = CoreFreq - kernel module sources
