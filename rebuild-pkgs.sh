@@ -6,7 +6,7 @@ source /usr/share/makepkg/integrity/verify_signature.sh
 source /usr/share/makepkg/util/message.sh
 colorize
 
-ignored_pkg=("caatinga-git" "freeplane-git" "corefreq-git")
+ignored_pkg=("caatinga-git" "freeplane-git" "corefreq-git" "freeplane-git" "linux-prjc")
 
 rebuild_package() {
   msg2 "Rebuilding package '$1' ..."
