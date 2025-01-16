@@ -6,7 +6,7 @@ source /usr/share/makepkg/integrity/verify_signature.sh
 source /usr/share/makepkg/util/message.sh
 colorize
 
-ignored_pkg=("caatinga-git" "freeplane-git" "corefreq-git" "freeplane-git" "linux-prjc")
+ignored_pkg=("linux-prjc" "intellij-idea-ce-eap" "intellij-idea-ue-eap")
 
 rebuild_package() {
   msg2 "Rebuilding package '$1' ..."
