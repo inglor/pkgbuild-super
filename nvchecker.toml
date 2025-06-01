@@ -3,11 +3,14 @@ oldver = "old_ver.json"
 newver = "new_ver.json"
 keyfile = "apikey.crypt"
 
-# AUR #
 [aarchup]
 source = "gitlab"
 gitlab = "artafinde/aarchup"
 use_max_tag = true
+
+[cachyos-ananicy-rules]
+source = "git"
+git = "https://github.com/CachyOS/ananicy-rules.git"
 
 [corefreq]
 source = "github"
@@ -30,11 +33,5 @@ cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.j
 [linux-prjc]
 source = "gitlab"
 gitlab = "alfredchen/linux-prjc"
-use_max_tag = true
-prefix = "v"
-
-[python-prometheus-fastapi-instrumentator]
-source = "github"
-github = "trallnag/prometheus-fastapi-instrumentator"
 use_max_tag = true
 prefix = "v"
