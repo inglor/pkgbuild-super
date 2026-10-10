@@ -26,10 +26,6 @@ use_latest_tag = true
 source = "cmd"
 cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='IntelliJ IDEA']/channel[@status='release' or @status='eap']/build/@fullNumber)\" -"
 
-[intellij-idea-ce-eap]
-source = "cmd"
-cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='IntelliJ IDEA']/channel[@status='release' or @status='eap']/build/@fullNumber)\" -"
-
 [linux-prjc]
 source = "gitlab"
 gitlab = "alfredchen/linux-prjc"
